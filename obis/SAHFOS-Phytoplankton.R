@@ -10,7 +10,5 @@ dwca_raw <-
 dwca_raw$files
 dwca_raw$emlmeta
 
-#install.packages("devtools")
-#devtools::install_github("GBIF-Europe/darwinator")
-#Read this! https://rdrr.io/github/GBIF-Europe/darwinator/f/vignettes/introduction.Rmd
-library(darwinator)
+obis_northsea_phytoplankton <-
+  obis_northsea[which(obis_northsea$scientificNameID %in% phytoplankton_species), ]
