@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "Install Rstudio-Server (v1.3.959) with custom version.\nBy LiuZixia@GitHub \nUrl: https://github.com/LiuZixia/R-tools"
 read -p "Enter R version [3.6.3]: " R_VERSION
 R_VERSION=${R_VERSION:-3.6.3}
 yum install sudo -y
