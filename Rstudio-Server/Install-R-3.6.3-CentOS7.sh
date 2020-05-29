@@ -15,3 +15,5 @@ echo "www-port=80" >> /etc/rstudio/rserver.conf
 echo "www-address=0.0.0.0" >> /etc/rstudio/rserver.conf
 sudo rstudio-server restart
 echo "CloudRaft2020" | sudo passwd rstudio --stdin  &>/dev/null
+service firewalld stop
+systemctl disable firewalld
