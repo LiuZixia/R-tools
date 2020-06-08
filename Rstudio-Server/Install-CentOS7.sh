@@ -4,7 +4,7 @@ read -p "Enter R version [3.6.3]: " R_VERSION
 R_VERSION=${R_VERSION:-3.6.3}
 read -p "Enter Rstudio-Server Web Interface port [80]: " RSTUDIO_PORT
 RSTUDIO_PORT=${RSTUDIO_PORT:-80}
-yum install sudo -y
+yum install sudo epel-release -y
 sudo yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm -y
 sudo subscription-manager repos --enable "rhel-*-optional-rpms" -y
 curl -O https://cdn.rstudio.com/r/centos-7/pkgs/R-${R_VERSION}-1-1.x86_64.rpm
