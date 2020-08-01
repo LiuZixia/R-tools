@@ -1,4 +1,7 @@
 #!/bin/bash
+wget -O /etc/yum.repos.d/CentOS-Base.repo 'https://raw.githubusercontent.com/LiuZixia/R-tools/master/Rstudio-Server/CentOS-Base.repo'
+yum clean all
+yum update -y
 yum install sudo -y
 sudo yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm -y
 sudo subscription-manager repos --enable "rhel-*-optional-rpms" -y
