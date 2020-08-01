@@ -14,8 +14,7 @@ sudo useradd rstudio -d /data
 chown -R rstudio /data
 wget https://download2.rstudio.org/server/centos6/x86_64/rstudio-server-rhel-1.3.959-x86_64.rpm
 sudo yum install rstudio-server-rhel-1.3.959-x86_64.rpm -y
-echo "www-port=80" >> /etc/rstudio/rserver.conf
-echo "www-address=0.0.0.0" >> /etc/rstudio/rserver.conf
+echo -e "www-port=80\nwww-address=0.0.0.0" > /etc/rstudio/rserver.conf
 sudo rstudio-server restart
 echo "CloudRaft2020" | sudo passwd rstudio --stdin  &>/dev/null
 service firewalld stop
