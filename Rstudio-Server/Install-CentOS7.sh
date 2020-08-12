@@ -15,5 +15,5 @@ wget https://download2.rstudio.org/server/centos6/x86_64/rstudio-server-rhel-1.3
 sudo yum install rstudio-server-rhel-1.3.959-x86_64.rpm -y
 echo -e "www-port=80\nwww-address=0.0.0.0" > /etc/rstudio/rserver.conf
 sudo rstudio-server restart
-firewall-cmd --zone=public --add-port=${RSTUDIO_PORT}/tcp --permanent
+firewall-cmd --zone=public --add-port=80/tcp --permanent
 firewall-cmd --reload
