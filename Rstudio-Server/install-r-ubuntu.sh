@@ -4,5 +4,5 @@ wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sud
 add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/"
 apt install r-base-dev -y
 apt install gdebi-core -y
-wget https://download2.rstudio.org/server/bionic/amd64/rstudio-server-1.4.1717-amd64.deb
-yes | gdebi rstudio-server-1.4.1717-amd64.deb
+wget https://download2.rstudio.org/server/jammy/amd64/rstudio-server-2023.12.1-402-amd64.deb
+yes | gdebi rstudio-server-2023.12.1-402-amd64.deb
